@@ -129,7 +129,7 @@ jq ".|.response|.data|.[]|.person|.name,.coords" testdata.json | head
 A note on the use of `sort -u` above
 
 The script `json2xpath.jq` has the ability to sort and remove duplicates but they
-are commented out.
+are [commented out](https://github.com/TomConlin/json2xpath/blob/master/json2xpath.jq#L14).
 
 They are disabled by default to allow more uses
 for example:
