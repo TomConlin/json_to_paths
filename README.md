@@ -60,8 +60,7 @@ which is a good starting point for tools such as [xpath2dot.awk](https://github.
 
 ```
 
-![testdata.svg](https://raw.githubusercontent.com/TomConlin/json2xpath/master/testdata.svg)
-
+![testdata.svg](https://github.com/TomConlin/json2xpath/blob/master/testdata.svg)
 
 For deeper exploration with `jq` xpath is not appropriate,
 but the syntax is not too far off.
