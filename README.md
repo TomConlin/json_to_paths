@@ -107,7 +107,7 @@ which need to be iterated over with `.[]`
 jq ".|.response|.data|.person|.name" testdata.json
 jq: error (at testdata.json:26227): Cannot index array with string "person"
 ```
-If we can't index an array with "person" it he because its predecessor is an array.
+If we can't index an array with "person" it is because its predecessor `data` is an array.
 
 ```
 jq ".|.response|.data|.[]|.person|.name,.coords" testdata.json | head
