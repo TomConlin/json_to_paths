@@ -98,7 +98,7 @@ jq ".response|.data|.[]|.person|.name,.coords" testdata.json | head
 
 #### Result for genreating XML xpaths
 ```
-| sort -u > testdata.xpath
+./json2xpath.jq testdata.json| sort -u > testdata.xpath
 cat testdata.xpath
 ./response
 ./response/count
@@ -128,7 +128,7 @@ which is a good starting point for tools such as [xpath2dot.awk](https://github.
 
 
 ```
-./json2xpath.jq testdata.json|
+./json2xpath.jq testdata.json |
     sort -u |
     xpath2dot.awk -v ORIENT="UD" |
     dot -T svg > testdata.svg
