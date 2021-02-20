@@ -64,7 +64,7 @@ This is a succinct representation of every simple path available through the jso
 Example:
 To see what the distribution of most common `tags` in that file.
 
-Noting that the path agrument to the next '`jq`  call  
+Noting that the path agrument to the next `jq`  call  
    **".response|.data|.[]|.person|.tags|.[]"**  
 is cut-n-paste from the next to last line of output from
 `json2jqpath.jq`  above.
