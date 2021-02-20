@@ -62,10 +62,17 @@ This is a succinct representation of every simple path available through the jso
 
 
 Example:
-To see what the distribution of most common `tags` in that file
+To see what the distribution of most common `tags` in that file.
+
+Noting that the path agrument to the next '`jq`  call
+   **.response|.data|.[]|.person|.tags|.[]**
+is cut-n-paste from the next to last line of output from
+`json2jqpath.jq`  above.
+
 
 ```
-jq ".response|.data|.[]|.person|.tags|.[]" testdata.json | sort | uniq -c | sort -nr | head
+jq ".response|.data|.[]|.person|.tags|.[]" testdata.json |
+    sort | uniq -c | sort -nr | head
      75 "est"
      64 "labore"
      63 "consectetur"
@@ -145,7 +152,7 @@ A note on the use of `sort -u` above
 The script `json2xpath.jq` has the ability to sort and remove duplicates but they
 are [commented out](https://github.com/TomConlin/json2xpath/blob/master/json2xpath.jq#L14).
 
-They are disabled by default to allow more uses
+They are disabled by default to allow more use cases
 for example:
 
  - We may be extracting data in some other program & want to know the native order
@@ -153,4 +160,3 @@ for example:
 
 If you know these are not your use case you can uncomment them in the script
 and eliminate piping the output through  `sort -u`
-
